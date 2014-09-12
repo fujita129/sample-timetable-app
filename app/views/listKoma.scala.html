@@ -3,14 +3,14 @@
 @import helper._
 
 @main {
-		<a class="btn success"  href="@routes.Application.renderListKoma()">Add a new Koma</a><br>
+		<a class="btn success"  href="@routes.Application.createKoma()">Add a new Koma</a><br>
 
         <table>
             <tbody>
             	@for(koma <- komas ) {
 
                     <tr>
-                        <td><a href="@routes.Application.renderListKoma()">@koma.name</a></td>
+                        <td><a href="@routes.Application.editKoma(koma.id)">@koma.name</a></td>
                     </tr>
                 }
             </tbody>

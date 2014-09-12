@@ -1,0 +1,26 @@
+@(komaForm: Form[Koma])
+
+@import helper._
+
+@implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) }
+
+@main {
+
+    <h1>Add a koma</h1>
+
+    @form(routes.Application.saveKoma()) {
+
+        <fieldset>
+
+            @inputText(komaForm("name"), '_label -> "Koma name", '_help -> "")
+
+        </fieldset>
+
+        <div class="actions">
+            <input type="submit" value="Create this Koma" class="btn primary"> or
+            <a href="@routes.Application.renderListKoma()" class="btn">Cancel</a>
+        </div>
+
+    }
+
+}

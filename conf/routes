@@ -8,5 +8,16 @@ GET     /                           controllers.Application.index()
 # Komas list
 GET     /komas                      controllers.Application.renderListKoma()
 
+# Add koma
+GET     /koma/new                   controllers.Application.createKoma()
+POST    /koma                       controllers.Application.saveKoma()
+
+# Edit existing koma
+GET     /komas/:id                  controllers.Application.editKoma(id:Long)
+POST    /komas/:id                  controllers.Application.updateKoma(id:Long)
+
+# Delete a koma
+POST    /komas/:id/delete           controllers.Application.deleteKoma(id:Long)
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
