@@ -1,0 +1,18 @@
+@(komas: List[Koma])
+
+@import helper._
+
+@main {
+		<a class="btn success"  href="@routes.Application.renderListKoma()">Add a new Koma</a><br>
+
+        <table>
+            <tbody>
+            	@for(koma <- komas ) {
+
+                    <tr>
+                        <td><a href="@routes.Application.renderListKoma()">@koma.name</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+}
