@@ -13,8 +13,8 @@
         <fieldset>
 
             @inputText(komaForm("name"), '_label -> "Koma name", '_help -> "")
-            @inputText(komaForm("day"), '_label -> "Time", '_help -> "")
-            @inputText(komaForm("num"), '_label -> "Day", '_help -> "")
+			@select(komaForm("time"), Seq(("1","1"),("2","2"),("3","3"),("4","4"),("5","5")) , '_label -> "Time", '_help -> "")
+			@select(komaForm("day"), Seq(("1","Mon"),("2","Tue"),("3","Wed"),("4","Thu"),("5","Fri")) , '_label -> "Day", '_help -> "")
             @inputText(komaForm("prof"), '_label -> "Prof name", '_help -> "")
         </fieldset>
 

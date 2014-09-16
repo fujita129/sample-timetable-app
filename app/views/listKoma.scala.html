@@ -5,17 +5,91 @@
 @main {
 		<a class="btn success"  href="@routes.Application.createKoma()">Add a new Koma</a><br>
 
+        @for(koma <- komas ) {
+		@if(koma.day=="1"){
+		<p>Monday</p>
         <table>
+        	<thead>
+        		<tr>
+        			<td>Name</td>
+        			<td>Professor</td>
+        		</tr>
+        	</thead>
             <tbody>
-            	@for(koma <- komas ) {
-
                     <tr>
                         <td><a href="@routes.Application.editKoma(koma.id)">@koma.name</a></td>
-                        <td>@koma.num</td>
-                        <td>@koma.day</td>
                         <td>@koma.prof</td>
                     </tr>
-                }
             </tbody>
         </table>
+        }
+		@if(koma.day=="2"){
+		<p>Tuesday</p>
+        <table>
+        	<thead>
+        		<tr>
+        			<td>Name</td>
+        			<td>Professor</td>
+        		</tr>
+        	</thead>
+            <tbody>
+                    <tr>
+                        <td><a href="@routes.Application.editKoma(koma.id)">@koma.name</a></td>
+                        <td>@koma.prof</td>
+                    </tr>
+            </tbody>
+        </table>
+        }
+		@if(koma.day=="3"){
+		<p>Wednesday</p>
+        <table>
+        	<thead>
+        		<tr>
+        			<td>Name</td>
+        			<td>Professor</td>
+        		</tr>
+        	</thead>
+            <tbody>
+                    <tr>
+                        <td><a href="@routes.Application.editKoma(koma.id)">@koma.name</a></td>
+                        <td>@koma.prof</td>
+                    </tr>
+            </tbody>
+        </table>
+        }
+		@if(koma.day=="4"){
+		<p>Thursday</p>
+        <table>
+        	<thead>
+        		<tr>
+        			<td>Name</td>
+        			<td>Professor</td>
+        		</tr>
+        	</thead>
+            <tbody>
+                    <tr>
+                        <td><a href="@routes.Application.editKoma(koma.id)">@koma.name</a></td>
+                        <td>@koma.prof</td>
+                    </tr>
+            </tbody>
+        </table>
+        }
+		@if(koma.day=="5"){
+		<p>Friday</p>
+        <table>
+        	<thead>
+        		<tr>
+        			<td>Name</td>
+        			<td>Professor</td>
+        		</tr>
+        	</thead>
+            <tbody>
+                    <tr>
+                        <td><a href="@routes.Application.editKoma(koma.id)">@koma.name</a></td>
+                        <td>@koma.prof</td>
+                    </tr>
+            </tbody>
+        </table>
+        }
+    	}
 }
